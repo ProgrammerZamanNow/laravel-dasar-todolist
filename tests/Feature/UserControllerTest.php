@@ -8,15 +8,10 @@ use Tests\TestCase;
 
 class UserControllerTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_example()
+    public function testLoginPage()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        $this->get('/login')
+            ->assertSeeText("Login");
     }
+
 }
